@@ -1,0 +1,32 @@
+name: Go AKS CI/CD
+
+on:
+  workflow_call:
+    inputs:
+      aks-cluster:
+        required: true
+        type: string
+
+      aks-resource-group:
+        required: true
+        type: string
+
+      acr-name:
+        required: true
+        type: string
+
+      helm-release:
+        required: true
+        type: string
+
+      helm-chart-path:
+        required: true
+        type: string
+
+      namespace:
+        required: true
+        type: string
+
+      go-version:
+        required: true
+        type: string
